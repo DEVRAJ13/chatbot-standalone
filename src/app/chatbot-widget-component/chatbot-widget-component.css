@@ -39,12 +39,16 @@
       padding: 10px;
       overflow-y: auto;
     }
+
+
     input {
       border: none;
       border-top: 1px solid #ddd;
       padding: 10px;
       outline: none;
     }
+
+    
     .message {
       margin: 5px 0;
       padding: 5px 8px;
