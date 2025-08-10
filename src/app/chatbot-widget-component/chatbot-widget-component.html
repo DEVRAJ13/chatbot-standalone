@@ -1,0 +1,22 @@
+<div class="chatbot-wrapper" [class.open]="isOpen">
+    <div class="chat-toggle" (click)="toggleChat()">
+        @if(!isOpen){
+        <span>message</span>
+        }
+        @if(isOpen){
+        <span>close</span>
+        }
+
+    </div>
+
+    @if(isOpen){
+    <div class="chat-window">
+        <div class="chat-header">🤖 Chatbot</div>
+        <div class="chat-body">
+            <div *ngFor="let msg of messages" class="message">{{ msg }}</div>
+        </div>
+        <input [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Type a message..." />
+    </div>
+    }
+
+</div>
